@@ -161,6 +161,20 @@ $white: #FFFFFF;
     padding: 20px;
 }
 
+// Accordian 
+.accordianContent {
+    overflow: hidden; 
+    max-height: 0; 
+    transition: max-height 0.3s ease-out; 
+}
+.accordianContent.open {
+    max-height: 500px; 
+}
+
+.accordianHeader h4{
+    margin: 10px 0;
+}
+
 // Media Quries
 
 @media (max-width: 1085px) {

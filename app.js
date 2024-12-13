@@ -1,26 +1,37 @@
-// accordian content fetch
+// Accordion content fetch
+fetch('accordian.json')
+    .then(response => response.json())
+    .then(data => {
+        const container = document.getElementById('accordianContainer');
+        
+        data.forEach(item => {
+            const accordian = document.createElement('div');
+            accordian.classList.add('accordian');
 
-    fetch('accordian.json')
-        .then(response => response.json())
-        .then(data => {
-            const container = document.getElementById('accordianContainer');
+            const header = document.createElement('div');
+            header.classList.add('accordianHeader');
+            header.innerHTML = `<h4>${item.title}</h4>`;
             
-            data.forEach(item => {
-                const accordian = document.createElement('div');
-                accordian.classList.add('accordian');
+            const content = document.createElement('div');
+            content.classList.add('accordianContent');
+            content.innerHTML = `<p>${item.answer}</p>`;
 
-                const header = document.createElement('div');
-                header.classList.add('accordianHeader');
-                header.innerHTML = `<h4>${item.title}</h4>`;
+            content.style.maxHeight = "0";
 
-                const content = document.createElement('div');
-                content.classList.add('accordianContent');
-                content.innerHTML = `<p>${item.answer}</p>`;
-
-                accordian.appendChild(header);
-                accordian.appendChild(content);
-                container.appendChild(accordian);
+            header.addEventListener('click', () => {
+                if (content.classList.contains('open')) {
+                    content.style.maxHeight = null;
+                    content.classList.remove('open');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.classList.add('open');
+                }
             });
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
 
+            accordian.appendChild(header);
+            accordian.appendChild(content);
+
+            container.appendChild(accordian);
+        });
+    })
+    .catch(error => console.error('Error fetching JSON:', error));

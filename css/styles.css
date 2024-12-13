@@ -148,6 +148,20 @@ body {
   padding: 20px;
 }
 
+.accordianContent {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+.accordianContent.open {
+  max-height: 500px;
+}
+
+.accordianHeader h4 {
+  margin: 10px 0;
+}
+
 @media (max-width: 1085px) {
   .headingContainer {
     font-size: 80px;
