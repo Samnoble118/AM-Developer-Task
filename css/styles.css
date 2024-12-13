@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.aboveFold {
+  background-color: #F8F3EB;
+  padding: 20px;
+}
+
+.belowFold {
+  background-color: #171A1E;
+  color: #F8F3EB;
+  display: flex;
+  padding: 20px;
+}
+
+.nav {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.navOptions {
+  flex: 1;
+  text-align: center;
+}
+
+.navList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.navOption {
+  display: inline-block;
+}
+
+.navOption a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.heroSection {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.headingContainer {
+  display: flex;
+  font-size: 5.75rem;
+  font-family: spline-sans, sans-serif;
+  font-weight: 400;
+  line-height: 108px;
+  padding: 0 20px;
+}
+
+.headingParagraph {
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .headingContainer {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 480px) {
+  .headingContainer {
+    font-size: 0.75rem;
+  }
+}
+.headingContainer img {
+  width: 81.17px;
+  height: 58.59px;
+}
+
+.subHeading {
+  font-family: geist, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33.12px;
+}
+
+.ctaButton button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 169px;
+  border-radius: 4px;
+  background-color: #171A1E;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 5px;
+}
+
+.btnLight button {
+  background-color: #F8F3EB;
+  color: #171A1E;
+  border: #171A1E 2px solid;
+}
+
+.ctaButton button a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctaButton button a i {
+  display: inline-block;
+}
+
+.ctaButton button a p {
+  margin: 0;
+  line-height: 1;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: center;
+}
+
+.arrowImg {
+  margin: 0 5px;
+}
+
+.imgContainer img {
+  border-radius: 4px;
+  width: 100%;
+}
+
+.imgContainer, .contentContainer {
+  width: 50%;
+}
+
+.contentContainer {
+  margin: 0 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */
