@@ -15,14 +15,14 @@ $white: #FFFFFF;
 // Main Sections styles
 .aboveFold{
     background-color: $colourLight;
-    padding: 20px;
+    padding: 40px;
 }
 
 .belowFold{
     background-color: $colourDark;
     color: $colourLight;
     display: flex;
-    padding: 20px;
+    padding: 40px;
 }
 
 // Nav bar 
@@ -73,36 +73,21 @@ $white: #FFFFFF;
 
 .headingContainer{
     display: flex;
-    font-size: 5.75rem;
+    font-size: 100px;
     font-family: spline-sans, sans-serif;
     font-weight: 400;
-    line-height: 108px;
     padding: 0 20px;
 }
 
 .headingParagraph{
     padding: 0 20px;
 }
-
-// Media Quries
-
-@media (max-width: 768px) {
-    .headingContainer {
-      font-size: 0.875rem; 
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .headingContainer {
-      font-size: 0.75rem; 
-    }
-  }
   
 
-.headingContainer img{
-    width: 81.17px;;
-    height: 58.59px;
-}
+// .headingContainer img{
+//     width: 81.17px;;
+//     height: 58.59px;
+// }
 
 // Hero sub heading 
 .subHeading{
@@ -126,11 +111,22 @@ $white: #FFFFFF;
     cursor: pointer;
     padding: 0;
     margin: 0 5px;
+    transition: 0.2s ease;
 }
 .btnLight button{
     background-color: $colourLight;
     color: $colourDark;
     border: $colourDark 2px solid;
+    transition: 0.2s ease;
+}
+.ctaButton button:hover{
+    background-color: $colourLight;
+    color: $colourDark;
+    border: $colourDark 2px solid;
+}
+.btnLight button:hover{
+    background-color: $colourDark;
+    color: $colourLight;
 }
 .ctaButton button a{
     text-decoration: none;
@@ -162,8 +158,34 @@ $white: #FFFFFF;
 
 .imgContainer, .contentContainer{
     width: 50%;
+    padding: 20px;
 }
 
-.contentContainer{
-    margin: 0 20px;
-}
+// Media Quries
+
+@media (max-width: 1085px) {
+    .headingContainer {
+      font-size: 80px; 
+    }
+  }
+
+@media (max-width: 768px) {
+    .headingContainer {
+      font-size: 60px; 
+    }
+    .headingContainer img{
+        height: 40px;
+    }
+    .headingParagraph{
+        padding: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .headingContainer {
+      font-size: 40px; 
+    }
+    .headingContainer img{
+        height: 20px;
+    }
+  }

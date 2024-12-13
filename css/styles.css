@@ -5,14 +5,14 @@ body {
 
 .aboveFold {
   background-color: #F8F3EB;
-  padding: 20px;
+  padding: 40px;
 }
 
 .belowFold {
   background-color: #171A1E;
   color: #F8F3EB;
   display: flex;
-  padding: 20px;
+  padding: 40px;
 }
 
 .nav {
@@ -61,30 +61,14 @@ body {
 
 .headingContainer {
   display: flex;
-  font-size: 5.75rem;
+  font-size: 100px;
   font-family: spline-sans, sans-serif;
   font-weight: 400;
-  line-height: 108px;
   padding: 0 20px;
 }
 
 .headingParagraph {
   padding: 0 20px;
-}
-
-@media (max-width: 768px) {
-  .headingContainer {
-    font-size: 0.875rem;
-  }
-}
-@media (max-width: 480px) {
-  .headingContainer {
-    font-size: 0.75rem;
-  }
-}
-.headingContainer img {
-  width: 81.17px;
-  height: 58.59px;
 }
 
 .subHeading {
@@ -107,12 +91,25 @@ body {
   cursor: pointer;
   padding: 0;
   margin: 0 5px;
+  transition: 0.2s ease;
 }
 
 .btnLight button {
   background-color: #F8F3EB;
   color: #171A1E;
   border: #171A1E 2px solid;
+  transition: 0.2s ease;
+}
+
+.ctaButton button:hover {
+  background-color: #F8F3EB;
+  color: #171A1E;
+  border: #171A1E 2px solid;
+}
+
+.btnLight button:hover {
+  background-color: #171A1E;
+  color: #F8F3EB;
 }
 
 .ctaButton button a {
@@ -148,10 +145,32 @@ body {
 
 .imgContainer, .contentContainer {
   width: 50%;
+  padding: 20px;
 }
 
-.contentContainer {
-  margin: 0 20px;
+@media (max-width: 1085px) {
+  .headingContainer {
+    font-size: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .headingContainer {
+    font-size: 60px;
+  }
+  .headingContainer img {
+    height: 40px;
+  }
+  .headingParagraph {
+    padding: 0;
+  }
+}
+@media (max-width: 480px) {
+  .headingContainer {
+    font-size: 40px;
+  }
+  .headingContainer img {
+    height: 20px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
