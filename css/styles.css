@@ -12,7 +12,8 @@ body {
   background-color: #171A1E;
   color: #F8F3EB;
   display: flex;
-  padding: 40px;
+  padding: 50px;
+  align-items: stretch;
 }
 
 .nav {
@@ -84,9 +85,12 @@ body {
   justify-content: center;
   height: 40px;
   width: 169px;
+  gap: 10px;
   border-radius: 4px;
   background-color: #171A1E;
   color: #FFFFFF;
+  padding: 10px 20px;
+  font-size: 14px;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -110,6 +114,7 @@ body {
 .btnLight button:hover {
   background-color: #171A1E;
   color: #F8F3EB;
+  border: #F8F3EB 2px solid;
 }
 
 .ctaButton button a {
@@ -143,9 +148,35 @@ body {
   width: 100%;
 }
 
-.imgContainer, .contentContainer {
+.imgContainer {
   width: 50%;
-  padding: 20px;
+  padding: 0;
+}
+
+.contentContainer {
+  width: 50%;
+  margin: 0 40px;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contentContainer h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+.contentContainer p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.accordianContainer {
+  margin-top: auto;
 }
 
 .accordianContent {
@@ -156,10 +187,30 @@ body {
 
 .accordianContent.open {
   max-height: 500px;
+  padding: 0 10px;
+  border-bottom: 1px solid #3E3E3E;
+}
+
+.accordianHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #3E3E3E;
 }
 
 .accordianHeader h4 {
-  margin: 10px 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  flex-grow: 1;
+}
+
+.plusIconImg {
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
 }
 
 @media (max-width: 1085px) {

@@ -9,8 +9,9 @@ body{
 $colourDark: #171A1E;
 $colourLight: #F8F3EB;
 $white: #FFFFFF;
+$lineColour: #3E3E3E;
 
-// css rules
+// CSS rules
 
 // Main Sections styles
 .aboveFold{
@@ -22,7 +23,8 @@ $white: #FFFFFF;
     background-color: $colourDark;
     color: $colourLight;
     display: flex;
-    padding: 40px;
+    padding: 50px;
+    align-items: stretch;
 }
 
 // Nav bar 
@@ -84,11 +86,6 @@ $white: #FFFFFF;
 }
   
 
-// .headingContainer img{
-//     width: 81.17px;;
-//     height: 58.59px;
-// }
-
 // Hero sub heading 
 .subHeading{
     font-family: geist, sans-serif;
@@ -104,9 +101,12 @@ $white: #FFFFFF;
     justify-content: center;
     height: 40px;
     width: 169px;
+    gap: 10px;
     border-radius: 4px;
     background-color: $colourDark;
     color: $white;
+    padding: 10px 20px;
+    font-size: 14px;
     border: none;
     cursor: pointer;
     padding: 0;
@@ -127,6 +127,7 @@ $white: #FFFFFF;
 .btnLight button:hover{
     background-color: $colourDark;
     color: $colourLight;
+    border: $colourLight 2px solid;
 }
 .ctaButton button a{
     text-decoration: none;
@@ -156,12 +157,36 @@ $white: #FFFFFF;
     width: 100%;
 }
 
-.imgContainer, .contentContainer{
+// below fold containers
+.imgContainer{
     width: 50%;
-    padding: 20px;
+    padding: 0;
+}
+.contentContainer {
+    width: 50%;
+    margin: 0 40px; 
+    padding: 0 40px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.contentContainer h2 {
+    font-size: 36px; 
+    margin-bottom: 16px;
+    line-height: 1.2; 
+    margin-top: 0;
+}
+.contentContainer p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 // Accordian 
+.accordianContainer{
+    margin-top: auto;
+}
+
 .accordianContent {
     overflow: hidden; 
     max-height: 0; 
@@ -169,10 +194,30 @@ $white: #FFFFFF;
 }
 .accordianContent.open {
     max-height: 500px; 
+    padding: 0 10px;
+    border-bottom: 1px solid $lineColour;
 }
 
-.accordianHeader h4{
-    margin: 10px 0;
+.accordianHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    cursor: pointer;
+    border-bottom: 1px solid $lineColour;
+}
+
+.accordianHeader h4 {
+    margin: 0; 
+    font-size: 14px; 
+    font-weight: 600;
+    flex-grow: 1; 
+}
+
+.plusIconImg {
+    width: 15px; 
+    height: 15px;
+    margin-left: 10px;
 }
 
 // Media Quries
