@@ -257,9 +257,6 @@ h1 {
   .headingContainer {
     font-size: 60px;
   }
-  .headingContainer img {
-    height: 40px;
-  }
   .headingParagraph {
     padding: 0;
   }
@@ -318,7 +315,7 @@ h1 {
     font-size: 40px;
   }
   .headingContainer img {
-    height: 20px;
+    height: 40px;
   }
   .subHeading {
     font-size: 14px;
