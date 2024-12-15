@@ -6,7 +6,9 @@
     <title>AM Developer Task</title>
     <script src="accordian.js"></script>
     <script src="buttons.js"></script>
+    <script src="burger.js"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -14,9 +16,9 @@
         <div class="nav">
             <div class="navBar">
                 <div class="logo">
-                    <img src="Assets/Group 5.png" alt="Nucleus main logo">
+                    <img src="Assets/Group 5.png" alt="Nucleus main logo" class="logoImg">
                 </div>
-                <div class="navOptions">
+                <div class="navOptions" id="theNav">
                         <ul class="navList">
                             <li class="navOption">Home</li>
                             <li class="navOption">Services</li>
@@ -24,14 +26,18 @@
                             <li class="navOption">Resources</li>
                         </ul>
                 </div>
+                <div class="burgerMenu" id="burger">
+                    <i class="fa fa-bars"></i>
+                </div>
                 <div class="ctaButton btnDark">
-                    <button class="theButton">
+                    <button class="theButton" id="navButton">
                         <a href="#">
                             <img id="whiteArrowImg" class="arrowImg" src="Assets/square-arrow-right-white.png" alt="Right arrow icon">
                             <p>Call to action</p>
                         </a>
                     </button>
                 </div>
+
                 
             </div>
         </div>
@@ -84,7 +90,7 @@
         </div>
         <div class="contentContainer">
             <h2>Mondern & versatile HubSpot theme</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+            <p class="textContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
             <div class="ctaButton btnLight">
                 <button class="theLightButton">
                     <a href="#">

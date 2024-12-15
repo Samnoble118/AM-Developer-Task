@@ -29,23 +29,33 @@ $lineColour: #3E3E3E;
 
 // Nav bar 
 .nav{
-    text-align: center;
     display: flex;
+    flex-direction: column; 
     justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .navBar {
-    display: flex; 
+    display: flex;
     justify-content: space-between; 
     align-items: center; 
-    width: 100%; 
-    max-width: 1200px; 
-    padding: 0 20px; 
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
   }
 
   .navOptions {
-    flex: 1;
+    width: 100%; 
     text-align: center; 
+    transition: opacity 0.5s ease-in;
+}
+.navOption:hover{
+    text-decoration: underline;
+}
+.navOptions.show {
+    display: block; 
+    opacity: 1;
 }
 
 .navList {
@@ -59,12 +69,22 @@ $lineColour: #3E3E3E;
 
 .navOption {
     display: inline-block;
+    cursor: pointer;
 }
 
 .navOption a {
     display: block;
     padding: 6px 12px;
     text-decoration: none;
+}
+#navButton.hide{
+    display: none;
+}
+
+//  Burger menu
+.burgerMenu{
+    display: none;
+    cursor: pointer;
 }
 
 // Hero section
@@ -99,8 +119,8 @@ $lineColour: #3E3E3E;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40px;
-    width: 169px;
+    height: 35px;
+    width: 150px;
     gap: 10px;
     border-radius: 4px;
     background-color: $colourDark;
@@ -172,12 +192,12 @@ $lineColour: #3E3E3E;
 }
 .contentContainer h2 {
     font-size: 36px; 
-    margin-bottom: 16px;
-    line-height: 1.2; 
+    margin-bottom: 6px;
+    // line-height: 1.2; 
     margin-top: 0;
 }
 .contentContainer p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -190,12 +210,12 @@ $lineColour: #3E3E3E;
 .accordianContent {
     overflow: hidden; 
     max-height: 0; 
-    transition: max-height 0.3s ease-out; 
+    transition: max-height 0.5s ease-out; 
 }
 .accordianContent.open {
-    max-height: 500px; 
     padding: 0 10px;
     border-bottom: 1px solid $lineColour;
+    padding-bottom: 20px;
 }
 
 .accordianHeader {
@@ -222,13 +242,16 @@ $lineColour: #3E3E3E;
 
 // Media Quries
 
-@media (max-width: 1085px) {
+@media only screen and  (max-width: 1085px) {
     .headingContainer {
       font-size: 80px; 
     }
+    .contentContainer h2 {
+        font-size: 30px;
+    }
   }
 
-@media (max-width: 768px) {
+  @media only screen and (max-width: 900px) {
     .headingContainer {
       font-size: 60px; 
     }
@@ -238,13 +261,63 @@ $lineColour: #3E3E3E;
     .headingParagraph{
         padding: 0;
     }
+    .subHeading{
+        font-size: 18px;
+    }
+    .belowFold{
+        flex-direction: column;
+    }
+    .imgContainer, .contentContainer {
+        width: 100%;
+        margin: 0;
+        padding: 20px 0;
+        justify-content: center;
+        display: flex;
+    }
+    .contentContainer h2{
+        text-align: center;
+    }
+    .textContent{
+        text-align: center;
+    }
+    .ctaButton.btnLight, .ctaButton.btnDark{
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+    }
+    .imgContainer img{
+        width: 90%;
+    }
   }
   
-  @media (max-width: 480px) {
+  @media only screen and (max-width: 750px){
+    .navOptions {
+        display: none; 
+        opacity: 0;
+    }
+    .burgerMenu{
+        display: block;
+    }
+    .navList{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .logoImg{
+        width: 80px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
     .headingContainer {
       font-size: 40px; 
     }
     .headingContainer img{
         height: 20px;
+    }
+    .subHeading{
+        font-size: 14px;
+    }
+    .btnGroup{
+        flex-direction: column;
     }
   }

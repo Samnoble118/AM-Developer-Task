@@ -8,31 +8,27 @@ fetch('accordian.json')
             const accordian = document.createElement('div');
             accordian.classList.add('accordian');
 
-            // Create header container
+            // Create the header for the accordian
             const header = document.createElement('div');
             header.classList.add('accordianHeader');
 
-            // Add title (h4) on the left
             const title = document.createElement('h4');
             title.textContent = item.title;
 
-            // Add first image (Vector.png) on the right
-            const imgRight = document.createElement('img');
-            imgRight.src = 'Assets/Vector.png';
-            imgRight.alt = 'Icon';
-            imgRight.classList.add('plusIconImg'); 
+            const plusIcon = document.createElement('img');
+            plusIcon.src = 'Assets/Vector.png';
+            plusIcon.alt = 'Icon';
+            plusIcon.classList.add('plusIconImg'); 
 
-            // Append title and icon to header
             header.appendChild(title);
-            header.appendChild(imgRight);
+            header.appendChild(plusIcon);
 
-            // Create content section (hidden by default)
             const content = document.createElement('div');
             content.classList.add('accordianContent');
             content.innerHTML = `<p>${item.answer}</p>`;
             content.style.maxHeight = "0";
 
-            // Add click event listener to toggle visibility
+            // Accordian toggle
             header.addEventListener('click', () => {
                 if (content.classList.contains('open')) {
                     content.style.maxHeight = null;
@@ -43,11 +39,10 @@ fetch('accordian.json')
                 }
             });
 
-            // Append header and content to accordion
+            // Adding header and content to accordian div
             accordian.appendChild(header);
             accordian.appendChild(content);
 
-            // Append accordion to container
             container.appendChild(accordian);
         });
     })
