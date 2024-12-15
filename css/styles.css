@@ -103,14 +103,14 @@ body {
 
 .headingContainer {
   display: flex;
-  font-size: 100px;
-  font-family: "spline-sans", sans-serif;
-  font-weight: 400;
   padding: 0 20px;
 }
 
 .headingParagraph {
   padding: 0 20px;
+  font-size: 100px;
+  font-family: "spline-sans", sans-serif;
+  font-weight: 400;
 }
 
 .subHeading {

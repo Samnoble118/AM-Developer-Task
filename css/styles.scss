@@ -146,14 +146,14 @@ body {
 
 .headingContainer {
     display: flex;
-    font-size: $font-size-large;
-    font-family: $font-heading;
-    font-weight: 400;
     padding: 0 $padding-small;
 }
 
 .headingParagraph {
     padding: 0 $padding-small;
+    font-size: $font-size-large;
+    font-family: $font-heading;
+    font-weight: 400;
 }
 
 // Hero sub heading
