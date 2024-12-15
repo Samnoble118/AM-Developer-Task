@@ -17,7 +17,6 @@ body {
 }
 
 .nav {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -43,7 +42,7 @@ body {
   text-decoration: underline;
 }
 
-.navOptions.show {
+.mobileNav.show {
   display: block;
   opacity: 1;
 }
@@ -73,13 +72,22 @@ body {
   outline: 2px solid #0056b3;
 }
 
-#navButton.hide {
+.mobileContainer {
+  display: flex;
+}
+
+.mobileNav {
   display: none;
+  opacity: 0;
+  transition: 0.5s opacity ease;
+  padding-top: 20px;
 }
 
 .burgerMenu {
   display: none;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 .heroSection {
@@ -213,7 +221,7 @@ body {
 .accordianContent.open {
   padding: 0 10px;
   border-bottom: 1px solid #3E3E3E;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
 }
 
 .accordianHeader {
@@ -291,10 +299,6 @@ body {
   }
   .burgerMenu {
     display: block;
-  }
-  .navList {
-    flex-direction: column;
-    gap: 10px;
   }
   .logoImg {
     width: 80px;

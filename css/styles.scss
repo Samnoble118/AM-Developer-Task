@@ -56,7 +56,7 @@ body {
 
 // Nav bar
 .nav {
-    display: flex;
+    // display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -82,7 +82,7 @@ body {
     text-decoration: underline;
 }
 
-.navOptions.show {
+.mobileNav.show {
     display: block;
     opacity: 1;
 }
@@ -110,15 +110,22 @@ body {
 .navOptions a:focus {
     outline: 2px solid #0056b3; 
 }
-
-#navButton.hide {
+.mobileContainer{
+    display: flex;
+}
+.mobileNav{
     display: none;
+    opacity: 0;
+    transition: 0.5s opacity ease;
+    padding-top: $padding-small;
 }
 
 // Burger menu
 .burgerMenu {
     display: none;
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
 // Hero section
@@ -258,7 +265,7 @@ body {
 .accordianContent.open {
     padding: 0 10px;
     border-bottom: 1px solid $lineColour;
-    padding-bottom: $padding-medium;
+    padding-bottom: 10px;
 }
 
 .accordianHeader {
@@ -340,10 +347,6 @@ body {
     }
     .burgerMenu {
         display: block;
-    }
-    .navList {
-        flex-direction: column;
-        gap: 10px;
     }
     .logoImg {
         width: 80px;
