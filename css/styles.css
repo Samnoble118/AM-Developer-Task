@@ -36,7 +36,7 @@ body {
 .navOptions {
   width: 100%;
   text-align: center;
-  transition: opacity 0.5s ease-in;
+  transition: 0.5s ease-in;
 }
 
 .navOption:hover {
@@ -66,6 +66,11 @@ body {
   display: block;
   padding: 6px 12px;
   text-decoration: none;
+  color: inherit;
+}
+
+.navOptions a:focus {
+  outline: 2px solid #0056b3;
 }
 
 #navButton.hide {
@@ -85,7 +90,7 @@ body {
 .headingContainer {
   display: flex;
   font-size: 100px;
-  font-family: spline-sans, sans-serif;
+  font-family: "spline-sans", sans-serif;
   font-weight: 400;
   padding: 0 20px;
 }
@@ -95,7 +100,7 @@ body {
 }
 
 .subHeading {
-  font-family: geist, sans-serif;
+  font-family: "geist", sans-serif;
   font-size: 24px;
   font-weight: 600;
   line-height: 33.12px;
@@ -111,7 +116,6 @@ body {
   border-radius: 4px;
   background-color: #171A1E;
   color: #FFFFFF;
-  padding: 10px 20px;
   font-size: 14px;
   border: none;
   cursor: pointer;
@@ -123,20 +127,20 @@ body {
 .btnLight button {
   background-color: #F8F3EB;
   color: #171A1E;
-  border: #171A1E 2px solid;
+  border: 2px solid #171A1E;
   transition: 0.2s ease;
 }
 
 .ctaButton button:hover {
   background-color: #F8F3EB;
   color: #171A1E;
-  border: #171A1E 2px solid;
+  border: 2px solid #171A1E;
 }
 
 .btnLight button:hover {
   background-color: #171A1E;
   color: #F8F3EB;
-  border: #F8F3EB 2px solid;
+  border: 2px solid #F8F3EB;
 }
 
 .ctaButton button a {
@@ -203,13 +207,13 @@ body {
 .accordianContent {
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.5s ease-out;
+  transition: 0.5s ease-in;
 }
 
 .accordianContent.open {
   padding: 0 10px;
   border-bottom: 1px solid #3E3E3E;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .accordianHeader {

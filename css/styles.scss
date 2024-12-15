@@ -1,9 +1,4 @@
-body{
-    margin: 0;
-    padding: 0;
-}
-
-// Variables 
+// Variables
 
 // Colours
 $colourDark: #171A1E;
@@ -11,26 +6,58 @@ $colourLight: #F8F3EB;
 $white: #FFFFFF;
 $lineColour: #3E3E3E;
 
-// CSS rules
+// Spacing
+$padding-small: 20px;
+$padding-medium: 40px;
+$padding-large: 50px;
+$gap-medium: 20px;
 
-// Main Sections styles
-.aboveFold{
-    background-color: $colourLight;
-    padding: 40px;
+// Typography
+$font-heading: 'spline-sans', sans-serif;
+$font-body: 'geist', sans-serif;
+$font-size-large: 100px;
+$font-size-medium: 36px;
+$font-size-small: 14px;
+$line-height-small: 1.6;
+$line-height-medium: 33.12px;
+
+// Buttons
+$btn-height: 35px;
+$btn-width: 150px;
+$btn-border-radius: 4px;
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-medium: 0.5s ease-in;
+
+// Border
+$border-width: 2px;
+
+// CSS Rules
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
-.belowFold{
+// Main Sections styles
+.aboveFold {
+    background-color: $colourLight;
+    padding: $padding-medium;
+}
+
+.belowFold {
     background-color: $colourDark;
     color: $colourLight;
     display: flex;
-    padding: 50px;
+    padding: $padding-large;
     align-items: stretch;
 }
 
-// Nav bar 
-.nav{
+// Nav bar
+.nav {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -38,23 +65,25 @@ $lineColour: #3E3E3E;
 
 .navBar {
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 1200px;
-    padding: 0 20px;
-  }
-
-  .navOptions {
-    width: 100%; 
-    text-align: center; 
-    transition: opacity 0.5s ease-in;
+    padding: 0 $padding-small;
 }
-.navOption:hover{
+
+.navOptions {
+    width: 100%;
+    text-align: center;
+    transition: $transition-medium;
+}
+
+.navOption:hover {
     text-decoration: underline;
 }
+
 .navOptions.show {
-    display: block; 
+    display: block;
     opacity: 1;
 }
 
@@ -62,8 +91,8 @@ $lineColour: #3E3E3E;
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex; 
-    gap: 20px; 
+    display: flex;
+    gap: $gap-medium;
     justify-content: center;
 }
 
@@ -76,146 +105,160 @@ $lineColour: #3E3E3E;
     display: block;
     padding: 6px 12px;
     text-decoration: none;
+    color: inherit;
 }
-#navButton.hide{
+.navOptions a:focus {
+    outline: 2px solid #0056b3; 
+}
+
+#navButton.hide {
     display: none;
 }
 
-//  Burger menu
-.burgerMenu{
+// Burger menu
+.burgerMenu {
     display: none;
     cursor: pointer;
 }
 
 // Hero section
-.heroSection{
+.heroSection {
     text-align: center;
-    padding: 0 20px;
+    padding: 0 $padding-small;
 }
 
-.headingContainer{
+.headingContainer {
     display: flex;
-    font-size: 100px;
-    font-family: spline-sans, sans-serif;
+    font-size: $font-size-large;
+    font-family: $font-heading;
     font-weight: 400;
-    padding: 0 20px;
+    padding: 0 $padding-small;
 }
 
-.headingParagraph{
-    padding: 0 20px;
+.headingParagraph {
+    padding: 0 $padding-small;
 }
-  
 
-// Hero sub heading 
-.subHeading{
-    font-family: geist, sans-serif;
+// Hero sub heading
+.subHeading {
+    font-family: $font-body;
     font-size: 24px;
     font-weight: 600;
-    line-height:33.12px;
+    line-height: $line-height-medium;
 }
 
 // CTA buttons
-.ctaButton button{
+.ctaButton button {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 35px;
-    width: 150px;
+    height: $btn-height;
+    width: $btn-width;
     gap: 10px;
-    border-radius: 4px;
+    border-radius: $btn-border-radius;
     background-color: $colourDark;
     color: $white;
-    padding: 10px 20px;
     font-size: 14px;
     border: none;
     cursor: pointer;
     padding: 0;
     margin: 0 5px;
-    transition: 0.2s ease;
+    transition: $transition-fast;
 }
-.btnLight button{
+
+.btnLight button {
     background-color: $colourLight;
     color: $colourDark;
-    border: $colourDark 2px solid;
-    transition: 0.2s ease;
+    border: $border-width solid $colourDark;
+    transition: $transition-fast;
 }
-.ctaButton button:hover{
+
+.ctaButton button:hover {
     background-color: $colourLight;
     color: $colourDark;
-    border: $colourDark 2px solid;
+    border: $border-width solid $colourDark;
 }
-.btnLight button:hover{
+
+.btnLight button:hover {
     background-color: $colourDark;
     color: $colourLight;
-    border: $colourLight 2px solid;
+    border: $border-width solid $colourLight;
 }
-.ctaButton button a{
+
+.ctaButton button a {
     text-decoration: none;
     color: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .ctaButton button a i {
     display: inline-block;
 }
+
 .ctaButton button a p {
     margin: 0;
     line-height: 1;
 }
-.btnGroup{
+
+.btnGroup {
     display: flex;
     justify-content: center;
 }
-.arrowImg{
+
+.arrowImg {
     margin: 0 5px;
 }
 
-// Below fold image 
-.imgContainer img{
-    border-radius: 4px;
+// Below fold image
+.imgContainer img {
+    border-radius: $btn-border-radius;
     width: 100%;
 }
 
-// below fold containers
-.imgContainer{
+// Below fold containers
+.imgContainer {
     width: 50%;
     padding: 0;
 }
+
 .contentContainer {
     width: 50%;
-    margin: 0 40px; 
-    padding: 0 40px; 
+    margin: 0 $padding-medium;
+    padding: 0 $padding-medium;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
+
 .contentContainer h2 {
-    font-size: 36px; 
+    font-size: $font-size-medium;
     margin-bottom: 6px;
-    // line-height: 1.2; 
     margin-top: 0;
 }
+
 .contentContainer p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    margin-bottom: $gap-medium;
 }
 
-// Accordian 
-.accordianContainer{
+// Accordion
+.accordianContainer {
     margin-top: auto;
 }
 
 .accordianContent {
-    overflow: hidden; 
-    max-height: 0; 
-    transition: max-height 0.5s ease-out; 
+    overflow: hidden;
+    max-height: 0;
+    transition: $transition-medium;
 }
+
 .accordianContent.open {
     padding: 0 10px;
     border-bottom: 1px solid $lineColour;
-    padding-bottom: 20px;
+    padding-bottom: $padding-medium;
 }
 
 .accordianHeader {
@@ -228,96 +271,96 @@ $lineColour: #3E3E3E;
 }
 
 .accordianHeader h4 {
-    margin: 0; 
-    font-size: 14px; 
+    margin: 0;
+    font-size: $font-size-small;
     font-weight: 600;
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 .plusIconImg {
-    width: 15px; 
+    width: 15px;
     height: 15px;
     margin-left: 10px;
 }
 
-// Media Quries
+// Media Queries
 
-@media only screen and  (max-width: 1085px) {
+@media only screen and (max-width: 1085px) {
     .headingContainer {
-      font-size: 80px; 
+        font-size: 80px;
     }
     .contentContainer h2 {
         font-size: 30px;
     }
-  }
+}
 
-  @media only screen and (max-width: 900px) {
+@media only screen and (max-width: 900px) {
     .headingContainer {
-      font-size: 60px; 
+        font-size: 60px;
     }
-    .headingContainer img{
+    .headingContainer img {
         height: 40px;
     }
-    .headingParagraph{
+    .headingParagraph {
         padding: 0;
     }
-    .subHeading{
+    .subHeading {
         font-size: 18px;
     }
-    .belowFold{
+    .belowFold {
         flex-direction: column;
     }
     .imgContainer, .contentContainer {
         width: 100%;
         margin: 0;
-        padding: 20px 0;
+        padding: $padding-small 0;
         justify-content: center;
         display: flex;
     }
-    .contentContainer h2{
+    .contentContainer h2 {
         text-align: center;
     }
-    .textContent{
+    .textContent {
         text-align: center;
     }
-    .ctaButton.btnLight, .ctaButton.btnDark{
+    .ctaButton.btnLight, .ctaButton.btnDark {
         display: flex;
         justify-content: center;
         margin: 5px;
     }
-    .imgContainer img{
+    .imgContainer img {
         width: 90%;
     }
-  }
-  
-  @media only screen and (max-width: 750px){
+}
+
+@media only screen and (max-width: 750px) {
     .navOptions {
-        display: none; 
+        display: none;
         opacity: 0;
     }
-    .burgerMenu{
+    .burgerMenu {
         display: block;
     }
-    .navList{
+    .navList {
         flex-direction: column;
         gap: 10px;
     }
-    .logoImg{
+    .logoImg {
         width: 80px;
     }
-  }
+}
 
-  @media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     .headingContainer {
-      font-size: 40px; 
+        font-size: 40px;
     }
-    .headingContainer img{
+    .headingContainer img {
         height: 20px;
     }
-    .subHeading{
-        font-size: 14px;
+    .subHeading {
+        font-size: $font-size-small;
     }
-    .btnGroup{
+    .btnGroup {
         flex-direction: column;
     }
-  }
+}
