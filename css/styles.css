@@ -3,6 +3,10 @@ body {
   padding: 0;
 }
 
+h1 {
+  font-size: 100px;
+}
+
 .skip-link {
   position: absolute;
   left: -999px;
