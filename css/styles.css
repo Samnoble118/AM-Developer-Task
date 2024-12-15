@@ -27,7 +27,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   max-width: 1200px;
   padding: 0 20px;
 }
@@ -267,8 +266,12 @@ body {
   .subHeading {
     font-size: 18px;
   }
+  .aboveFold {
+    padding: 20px;
+  }
   .belowFold {
     flex-direction: column;
+    padding: 20px;
   }
   .imgContainer, .contentContainer {
     width: 100%;
