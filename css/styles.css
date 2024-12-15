@@ -107,11 +107,9 @@ h1 {
 
 .headingContainer {
   display: flex;
-  padding: 0 20px;
 }
 
 .headingParagraph {
-  padding: 0 20px;
   font-family: "spline-sans", sans-serif;
   font-weight: 400;
 }
@@ -298,6 +296,9 @@ h1 {
   }
 }
 @media only screen and (max-width: 750px) {
+  h1 {
+    font-size: 75px;
+  }
   .navOptions {
     display: none;
     opacity: 0;
@@ -310,6 +311,9 @@ h1 {
   }
 }
 @media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 50px;
+  }
   .headingContainer {
     font-size: 40px;
   }
