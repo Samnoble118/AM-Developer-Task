@@ -1,10 +1,10 @@
 // Variables
 
 // Colours
-$colourDark: #171A1E;
-$colourLight: #F8F3EB;
+$colour-dark: #171A1E;
+$colour-light: #F8F3EB;
 $white: #FFFFFF;
-$lineColour: #3E3E3E;
+$colour-grey: #3E3E3E;
 
 // Spacing
 $padding-small: 20px;
@@ -18,8 +18,8 @@ $font-body: 'geist', sans-serif;
 $font-size-large: 100px;
 $font-size-medium: 36px;
 $font-size-small: 14px;
-$line-height-small: 1.6;
-$line-height-medium: 33.12px;
+$line-height-small: 24px;
+$line-height-medium: 33px;
 
 // Buttons
 $btn-height: 35px;
@@ -28,7 +28,7 @@ $btn-border-radius: 4px;
 
 // Transitions
 $transition-fast: 0.2s ease;
-$transition-medium: 0.5s ease-in;
+$transition-medium: 0.5s ease;
 
 // Border
 $border-width: 2px;
@@ -39,16 +39,21 @@ body {
     margin: 0;
     padding: 0;
 }
+.skip-link{
+    position: absolute; 
+    left: -999px; 
+    top: -999px;
+}
 
 // Main Sections styles
 .aboveFold {
-    background-color: $colourLight;
+    background-color: $colour-light;
     padding: $padding-medium;
 }
 
 .belowFold {
-    background-color: $colourDark;
-    color: $colourLight;
+    background-color: $colour-dark;
+    color: $colour-light;
     display: flex;
     padding: $padding-large;
     align-items: stretch;
@@ -56,7 +61,6 @@ body {
 
 // Nav bar
 .nav {
-    // display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -98,20 +102,23 @@ body {
 .navOption {
     display: inline-block;
     cursor: pointer;
+
+    a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a:focus {
+        outline: 2px solid #0056b3; 
+    }
 }
 
-.navOption a {
-    display: block;
-    padding: 6px 12px;
-    text-decoration: none;
-    color: inherit;
-}
-.navOptions a:focus {
-    outline: 2px solid #0056b3; 
-}
 .mobileContainer{
     display: flex;
 }
+
 .mobileNav{
     display: none;
     opacity: 0;
@@ -125,9 +132,10 @@ body {
     cursor: pointer;
     background: none;
     border: none;
-}
-.burgerMenu i{
-    color: $colourDark;
+
+    i {
+        color: $colour-dark;
+    }
 }
 
 // Hero section
@@ -165,7 +173,7 @@ body {
     width: $btn-width;
     gap: 10px;
     border-radius: $btn-border-radius;
-    background-color: $colourDark;
+    background-color: $colour-dark;
     color: $white;
     font-size: 14px;
     border: none;
@@ -173,42 +181,41 @@ body {
     padding: 0;
     margin: 0 5px;
     transition: $transition-fast;
-}
 
-.btnLight button {
-    background-color: $colourLight;
-    color: $colourDark;
-    border: $border-width solid $colourDark;
-    transition: $transition-fast;
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            display: inline-block;
+        }
+    }
 }
 
 .ctaButton button:hover {
-    background-color: $colourLight;
-    color: $colourDark;
-    border: $border-width solid $colourDark;
+    background-color: $colour-light;
+    color: $colour-dark;
+    border: $border-width solid $colour-dark;
+
+    img {
+        filter: invert(1);
+    }
+}
+
+.btnLight button {
+    background-color: $colour-light;
+    color: $colour-dark;
+    border: $border-width solid $colour-dark;
+    transition: $transition-fast;
 }
 
 .btnLight button:hover {
-    background-color: $colourDark;
-    color: $colourLight;
-    border: $border-width solid $colourLight;
-}
-
-.ctaButton button a {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.ctaButton button a i {
-    display: inline-block;
-}
-
-.ctaButton button a p {
-    margin: 0;
-    line-height: 1;
+    background-color: $colour-dark;
+    color: $colour-light;
+    border: $border-width solid $colour-light;
 }
 
 .btnGroup {
@@ -220,16 +227,15 @@ body {
     margin: 0 5px;
 }
 
-// Below fold image
-.imgContainer img {
-    border-radius: $btn-border-radius;
-    width: 100%;
-}
-
 // Below fold containers
 .imgContainer {
     width: 50%;
     padding: 0;
+
+    img {
+        border-radius: $btn-border-radius;
+        width: 100%;
+    }
 }
 
 .contentContainer {
@@ -239,51 +245,51 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-}
 
-.contentContainer h2 {
-    font-size: $font-size-medium;
-    margin-bottom: 6px;
-    margin-top: 0;
-}
+    h2 {
+        font-size: $font-size-medium;
+        margin-bottom: 6px;
+        margin-top: 0;
+    }
 
-.contentContainer p {
-    font-size: $font-size-small;
-    line-height: $line-height-small;
-    margin-bottom: $gap-medium;
+    p {
+        font-size: $font-size-small;
+        line-height: $line-height-small;
+        margin-bottom: $gap-medium;
+    }
 }
 
 // Accordion
-.accordianContainer {
+.accordionContainer {
     margin-top: auto;
 }
 
-.accordianContent {
+.accordionContent {
     overflow: hidden;
     max-height: 0;
     transition: $transition-medium;
 }
 
-.accordianContent.open {
+.accordionContent.open {
     padding: 0 10px;
-    border-bottom: 1px solid $lineColour;
+    border-bottom: 1px solid $colour-grey;
     padding-bottom: 10px;
 }
 
-.accordianHeader {
+.accordionHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
     cursor: pointer;
-    border-bottom: 1px solid $lineColour;
-}
+    border-bottom: 1px solid $colour-grey;
 
-.accordianHeader h4 {
-    margin: 0;
-    font-size: $font-size-small;
-    font-weight: 600;
-    flex-grow: 1;
+    h3 {
+        margin: 0;
+        font-size: $font-size-small;
+        font-weight: 600;
+        flex-grow: 1;
+    }
 }
 
 .plusIconImg {
@@ -306,10 +312,12 @@ body {
 @media only screen and (max-width: 900px) {
     .headingContainer {
         font-size: 60px;
+
+        img {
+            height: 40px;
+        }
     }
-    .headingContainer img {
-        height: 40px;
-    }
+
     .headingParagraph {
         padding: 0;
     }
@@ -362,10 +370,12 @@ body {
 @media only screen and (max-width: 480px) {
     .headingContainer {
         font-size: 40px;
+
+        img {
+            height: 20px;
+        }
     }
-    .headingContainer img {
-        height: 20px;
-    }
+
     .subHeading {
         font-size: $font-size-small;
     }

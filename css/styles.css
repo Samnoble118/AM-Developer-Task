@@ -3,6 +3,12 @@ body {
   padding: 0;
 }
 
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: -999px;
+}
+
 .aboveFold {
   background-color: #F8F3EB;
   padding: 40px;
@@ -34,7 +40,7 @@ body {
 .navOptions {
   width: 100%;
   text-align: center;
-  transition: 0.5s ease-in;
+  transition: 0.5s ease;
 }
 
 .navOption:hover {
@@ -59,15 +65,13 @@ body {
   display: inline-block;
   cursor: pointer;
 }
-
 .navOption a {
   display: block;
   padding: 6px 12px;
   text-decoration: none;
   color: inherit;
 }
-
-.navOptions a:focus {
+.navOption a:focus {
   outline: 2px solid #0056b3;
 }
 
@@ -88,7 +92,6 @@ body {
   background: none;
   border: none;
 }
-
 .burgerMenu i {
   color: #171A1E;
 }
@@ -114,7 +117,7 @@ body {
   font-family: "geist", sans-serif;
   font-size: 24px;
   font-weight: 600;
-  line-height: 33.12px;
+  line-height: 33px;
 }
 
 .ctaButton button {
@@ -134,6 +137,25 @@ body {
   margin: 0 5px;
   transition: 0.2s ease;
 }
+.ctaButton button a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ctaButton button a i {
+  display: inline-block;
+}
+
+.ctaButton button:hover {
+  background-color: #F8F3EB;
+  color: #171A1E;
+  border: 2px solid #171A1E;
+}
+.ctaButton button:hover img {
+  filter: invert(1);
+}
 
 .btnLight button {
   background-color: #F8F3EB;
@@ -142,33 +164,10 @@ body {
   transition: 0.2s ease;
 }
 
-.ctaButton button:hover {
-  background-color: #F8F3EB;
-  color: #171A1E;
-  border: 2px solid #171A1E;
-}
-
 .btnLight button:hover {
   background-color: #171A1E;
   color: #F8F3EB;
   border: 2px solid #F8F3EB;
-}
-
-.ctaButton button a {
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.ctaButton button a i {
-  display: inline-block;
-}
-
-.ctaButton button a p {
-  margin: 0;
-  line-height: 1;
 }
 
 .btnGroup {
@@ -180,14 +179,13 @@ body {
   margin: 0 5px;
 }
 
-.imgContainer img {
-  border-radius: 4px;
-  width: 100%;
-}
-
 .imgContainer {
   width: 50%;
   padding: 0;
+}
+.imgContainer img {
+  border-radius: 4px;
+  width: 100%;
 }
 
 .contentContainer {
@@ -198,36 +196,34 @@ body {
   flex-direction: column;
   justify-content: flex-start;
 }
-
 .contentContainer h2 {
   font-size: 36px;
   margin-bottom: 6px;
   margin-top: 0;
 }
-
 .contentContainer p {
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 24px;
   margin-bottom: 20px;
 }
 
-.accordianContainer {
+.accordionContainer {
   margin-top: auto;
 }
 
-.accordianContent {
+.accordionContent {
   overflow: hidden;
   max-height: 0;
-  transition: 0.5s ease-in;
+  transition: 0.5s ease;
 }
 
-.accordianContent.open {
+.accordionContent.open {
   padding: 0 10px;
   border-bottom: 1px solid #3E3E3E;
   padding-bottom: 10px;
 }
 
-.accordianHeader {
+.accordionHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -235,8 +231,7 @@ body {
   cursor: pointer;
   border-bottom: 1px solid #3E3E3E;
 }
-
-.accordianHeader h4 {
+.accordionHeader h3 {
   margin: 0;
   font-size: 14px;
   font-weight: 600;

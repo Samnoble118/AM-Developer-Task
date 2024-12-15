@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AM Developer Task</title>
-    <script src="accordian.js"></script>
-    <script src="buttons.js"></script>
+    <script src="accordion.js"></script>
     <script src="burger.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-    <a href="#mainContent" class="skip-link" style="position: absolute; left: -999px; top: -999px;">Skip to Content</a>
 
-    <div class="aboveFold">
+<body>
+    <a href="#mainContent" class="skip-link">Skip to Content</a>
+
+    <section class="aboveFold">
         <nav class="nav" role="navigation">
             <div class="navBar">
                 <div class="logo">
@@ -28,17 +29,18 @@
                     </ul>
                 </div>
                 <div class="mobileContainer">
-                <div class="ctaButton btnDark">
-                    <button id="navButton" class="theButton">
-                        <a href="#">
-                            <img id="whiteArrowImg" class="arrowImg" src="Assets/square-arrow-right-white.png" alt="">
-                            <span>Call to action</span>
-                        </a>
+                    <div class="ctaButton btnDark">
+                        <button id="navButton" class="theButton">
+                            <a href="#">
+                                <img id="whiteArrowImg" class="arrowImg" src="Assets/square-arrow-right-white.png"
+                                    alt="Arrow pointing right icon">
+                                Call to action
+                            </a>
+                        </button>
+                    </div>
+                    <button class="burgerMenu" id="burger" aria-label="Open navigation menu">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
                     </button>
-                </div>
-                <button class="burgerMenu" id="burger" aria-label="Open navigation menu">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </button>
                 </div>
             </div>
             <div class="mobileNav" id="theMobileNav">
@@ -50,14 +52,14 @@
                 </ul>
             </div>
         </nav>
-        
+
 
         <main class="heroSection" id="mainContent">
             <div class="mainHeading">
                 <div class="headingContainer">
                     <p class="headingParagraph">Modern
                         <img src="Assets/Frame 3.png" alt="Green icon with circle symbol">
-                        & Versatile 
+                        & Versatile
                         <img src="Assets/Frame 4.png" alt="Red icon with connector symbol">
                         HubSpot
                         <img src="Assets/Frame 1.png" alt="Orange icon with arrow symbols">
@@ -67,7 +69,7 @@
                 </div>
             </div>
             <div class="subHeading">
-                <h3>Subheading example text</h3>
+                <h2>Subheading example text</h2>
             </div>
             <div class="heroPText">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -76,22 +78,22 @@
                 <div class="ctaButton btnLight">
                     <button class="theLightButton" aria-label="Primary Call to Action">
                         <a href="#">
-                            <img class="arrowImg" src="Assets/square-arrow-right-black.png" alt="">
-                            <span>Call to action</span>
+                            <img class="arrowImg" src="Assets/square-arrow-right-black.png" alt="Arrow pointing right icon">
+                            Call to action
                         </a>
                     </button>
                 </div>
                 <div class="ctaButton btnDark">
                     <button class="theButton" aria-label="Secondary Call to Action">
                         <a href="#">
-                            <img class="arrowImg" src="Assets/square-arrow-right-white.png" alt="">
-                            <span>Call to action</span>
+                            <img class="arrowImg" src="Assets/square-arrow-right-white.png" alt="Arrow pointing right icon">
+                            Call to action
                         </a>
                     </button>
                 </div>
             </div>
         </main>
-    </div>
+    </section>
 
     <section class="belowFold">
         <div class="imgContainer">
@@ -99,22 +101,21 @@
         </div>
         <div class="contentContainer">
             <h2>Modern & versatile HubSpot theme</h2>
-            <p class="textContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+            <p class="textContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et.</p>
             <div class="ctaButton btnLight">
                 <button class="theLightButton" aria-label="Another Call to Action">
                     <a href="#">
-                        <img class="arrowImg" src="Assets/square-arrow-right-black.png" alt="">
-                        <span>Call to action</span>
+                        <img class="arrowImg" src="Assets/square-arrow-right-black.png" alt="Arrow pointing right icon">
+                        Call to action
                     </a>
                 </button>
             </div>
-            <div id="accordianContainer" class="accordianContainer">
-                
+            <div id="accordionContainer" class="accordionContainer">
+
             </div>
         </div>
-        
-
-    </div>
-
+    </section>
 </body>
+
 </html>
