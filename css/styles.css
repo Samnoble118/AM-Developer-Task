@@ -89,6 +89,10 @@ body {
   border: none;
 }
 
+.burgerMenu i {
+  color: #171A1E;
+}
+
 .heroSection {
   text-align: center;
   padding: 0 20px;

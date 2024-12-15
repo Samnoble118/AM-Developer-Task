@@ -1,6 +1,7 @@
 // Dark button image hover change
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.theButton');
+    const navButton = document.getElementById('navButton');
 
     buttons.forEach(button => {
         const buttonImg = button.querySelector('.arrowImg'); 
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 // Light button image hover change
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.theLightButton');
